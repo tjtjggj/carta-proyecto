@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sorpresa Romántica — Interactivo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="brand">Sorpresa 💖</div>
+<div id="hamburger" class="hamburger disabled" title="Menú"><div></div></div>
+</header>
+
+
+<aside id="sidebar">
+<h3>Opciones</h3>
+<ul>
+<li><a href="#album" class="menu-link extra disabled" id="link-album">📸 Álbum</a></li>
+<li><a href="#lugares" class="menu-link extra disabled" id="link-lugares">📍 Lugares</a></li>
+<li><a href="#config" class="menu-link extra disabled" id="link-config">💌 Carta</a></li>
+</ul>
+<p class="small muted">Estas opciones se activan cuando llegas a la página 3.</p>
+</aside>
+
+
+<div id="countdown-overlay">
+<div id="countdown-box">
+<div id="cd-num">00d 00:00:00</div>
+<div id="cd-sub">Acceso bloqueado hasta la fecha indicada</div>
+
+
+<div id="overlayEnvelope" class="overlay-envelope" style="display:none">
+<!-- using the uploaded image (medium size) -->
+<img src="mi-proyecto-web/imagenes/carta.png" alt="carta" />
+</div>
+
+
+<div class="small" style="margin-top:14px">Cambia la fecha en <code>script.js</code> (variable <code>targetDate</code>).</div>
+</div>
+</div>
+
+
+<div id="particles" aria-hidden="true"></div>
+
+
+<main>
+<section id="page1" class="page active">
+<div class="message-card">
+<h2 id="p1-title">Mensaje página 1</h2>
+<p id="p1-text">Aquí aparecerá tu mensaje para la página 1.</p>
+<div id="p1-photos" class="photos-row"></div>
+<div class="center"><button class="btn" id="p1-continue">Continuar</button></div>
+</div>
+</section>
+
+
+<section id="page2" class="page">
+<div class="message-card">
+<h2 id="p2-title">Mensaje página 2</h2>
+<p id="p2-text">Aquí aparecerá tu mensaje para la página 2.</p>
+<div id="p2-photos" class="photos-row"></div>
+<div class="center"><button class="btn" id="p2-continue">Continuar</button></div>
+</div>
+</section>
+
+
+<section id="page3" class="page">
+<div class="message-card">
+<h2 id="p3-title">Mensaje página 3</h2>
+<p id="p3-text">Aquí aparecerá tu mensaje para la página 3. Al llegar aquí el menú estará disponible.</p>
+<div id="p3-photos" class="photos-row"></div>
+</div>
+</section>
+
+
+<section id="album" class="page">
+<div class="card">
+<h2>Álbum de fotos</h2>
+<p class="muted">Añade fotos por URL o sube archivos. Se guardan en Firebase Storage y aparecen con marco.</p>
+<div class="controls">
+<input id="albumUrl" placeholder="URL de la foto" type="text" />
+<input id="albumFile" type="file" accept="image/*" />
+<button id="addAlbumBtn" class="btn">Añadir foto</button>
+</div>
+<div id="albumGrid" class="grid"></div>
+</div>
+</section>
+</html>
